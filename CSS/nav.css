@@ -28,7 +28,13 @@
     cursor: pointer;
     padding: 7px 7px;
     border-radius: 90px;
+    transition: transform 0.3s ease;
   }
+
+  & .home:hover {
+      transform: scale(1.05);
+      color: white;
+    }
 
   & .search {
     display: flex;
@@ -47,6 +53,12 @@
       font-size: x-large;
       cursor: pointer;
       color: rgb(184, 184, 184);
+      transition: transform 0.3s ease;
+    }
+
+    & .sir:hover {
+      transform: scale(1.05);
+      color: white;
     }
 
     & input {
@@ -69,6 +81,82 @@
       font-size: 25px;
       cursor: pointer;
       color: rgb(184, 184, 184);
+      transition: transform 0.3s ease;
     }
+
+    & .folder:hover {
+      transform: scale(1.05);
+      color: white;
+    }
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 20px;
+
+  & .premium {
+    padding: 10px 15px;
+    border-radius: 40px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  & .premium:hover {
+    transform: scale(1.05);
+  }
+
+  & .Install {
+    display: flex;
+    border: none;
+    flex-direction: row;
+    padding: 10px 15px;
+    border-radius: 40px;
+    cursor: pointer;
+    color: rgb(184, 184, 184);
+    background-color: transparent;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  & .Install:hover {
+    transform: scale(1.05);
+    color: white;
+  }
+
+  & .bell {
+    color: rgb(184, 184, 184);
+    font-size: x-large;
+    cursor: pointer;
+    border: none;
+  }
+  & .bell:hover {
+    transform: scale(1.05);
+    color: white;
+  }
+
+  & .community {
+    color: rgb(184, 184, 184);
+    cursor: pointer;
+    font-size: x-large;
+    border: none;
+  }
+
+  & .community:hover {
+    transform: scale(1.05);
+    color: white;
+  }
+
+  & .pro-btn {
+    padding: 15px 19px;
+    cursor: pointer;
+    border: none;
+
+    border-radius: 50px;
   }
 }

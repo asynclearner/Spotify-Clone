@@ -1,0 +1,129 @@
+.player-menu {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 0;
+  padding-bottom: 0;
+  /* border: 2px solid white; */
+  color: white;
+
+  & .song-player {
+    display: flex;
+    padding: 0 10px;
+    /* border: 2px solid white; */
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+
+    & img {
+      width: 5vw;
+      border-radius: 5px;
+      height: 5vw;
+    }
+
+    & .player-text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      /* margin: 0 20px; */
+      /* border: 2px solid white; */
+      overflow: hidden;
+
+      & .marquee:hover{
+        text-decoration: underline;
+      }
+
+      & h5 {
+        color: rgb(176, 176, 176);
+        cursor: pointer;
+      }
+
+      & h5:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.player-setting {
+  display: flex;
+  padding: 0 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+
+  & .player-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    gap: 20px;
+
+    & i{
+    cursor: pointer;
+    }
+  }
+
+  & .length {
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+    flex-direction: row;
+    align-items: center;
+
+    & .progress-bar {
+      height: 1vh;
+      width: 30vw;
+      cursor: pointer;
+      background-color: rgb(176, 176, 176);
+      /* outline: 1px solid white; */
+      background-color: wh;
+      border-radius: 10px;
+    }
+
+    & h4 {
+      font-weight: 400;
+    }
+  }
+}
+
+.player-more{
+    display: flex;
+    padding-left: 7vw;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    & .icon-pack{
+        color: rgb(176, 176, 176);
+        display: flex;
+        gap: 15px;
+        font-size: 20px;
+        flex-direction: row;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    & .speaker{
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+        flex-direction: row;
+        align-items: center;
+
+        & i{
+            color: rgb(176, 176, 176);
+            cursor: pointer;
+        }
+
+        & .speaker-progress{
+            height: 0.5vh;
+            cursor: pointer;
+            background-color: white;
+            width: 5vw;
+            outline: 1px solid white;
+            border-radius: 5px;
+        }
+    }
+}

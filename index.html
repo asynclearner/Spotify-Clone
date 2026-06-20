@@ -1,39 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify - Web Player</title>
-    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon" />
 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <!-- CSS Files -->
-     <link rel="stylesheet" href="./CSS/nav.css">
-     <link rel="stylesheet" href="./CSS/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./CSS/nav.css" />
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <link rel="stylesheet" href="./CSS/left-bar.css" />
+    <link rel="stylesheet" href="./CSS/player.css" />
+  </head>
+  <body>
     <header class="nav">
-        <div class="logo">
-            <div class="logo-nakli">
-                <i class="ri-spotify-fill pic"></i>
-                <i class="ri-home-5-fill home"></i>
-                <div class="search" id="search">
-                    <i class="ri-search-line sir"></i>
-                    <input type="text" size="35" placeholder="What do You want to play?">
-                    <i class="ri-folder-open-line folder"></i>
-                </div>
+      <div class="logo">
+        <div class="logo-nakli">
+          <a href="index.html" style="text-decoration: none"
+            ><i class="ri-spotify-fill pic"></i
+          ></a>
+          <i class="ri-home-5-fill home"></i>
+          <div class="search">
+            <i class="ri-search-line sir"></i>
+            <input
+              type="text"
+              size="35"
+              placeholder="What do You want to play?"
+            />
+            <i class="ri-folder-open-line folder"></i>
+          </div>
+        </div>
+        <div class="profile">
+          <button class="premium">Explore Premium</button>
+          <button class="Install">
+            <i class="ri-arrow-down-circle-line"></i> &nbsp;Install App
+          </button>
+          <i class="ri-notification-2-line bell"></i>
+          <i class="ri-team-fill community"></i>
+          <button class="pro-btn">V</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="left-bar">
+      <div class="library">
+        <div class="left-menu">
+          <div class="your">
+            <i class="ri-sidebar-fold-line collapse"></i>
+            <h4>Your Library</h4>
+          </div>
+          <div class="create">
+            <button class="create-btn">
+              <i class="ri-add-large-line"></i> &nbsp;Create
+            </button>
+            <i class="ri-expand-diagonal-line expand"></i>
+          </div>
+        </div>
+        <div class="albums">
+          <div class="albums-parent">
+            <div class="albums-btn">albums</div>
+            <div class="recents">
+              <i class="ri-search-line sirji"></i>
+              <button class="left-recents">
+                <h4>Recents</h4>
+                <i class="ri-list-unordered"></i>
+              </button>
             </div>
-            <div class="profile">
-                <button class="premium">Explor premium</button>
-                <button class="Install"><i class="ri-arrow-down-circle-line"></i> &nbsp; Install App</button>
-                <i class="ri-notification-2-line"></i>
-                <i class="ri-team-fill"></i>
-                <button class="pro-btn">V</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="songs">
+        <div class="playlist">
+          <div class="liked">
+            <i class="ri-play-large-fill play"></i>
+            <img src="./Images/liked-songs.png" alt="" />
+            <div class="like-song">
+              <h4>Liked Songs</h4>
+              <h5>
+                <i class="ri-pushpin-fill" style="color: rgb(0, 182, 0)"></i>
+                Playlist • 2 songs
+              </h5>
             </div>
+          </div>
+          <div class="liked">
+            <i class="ri-play-large-fill play"></i>
+            <img src="./Images/batidao.webp" alt="" />
+            <div class="like-song">
+              <h4>NO BATIDÃO</h4>
+              <h5>Single • ZXKAI</h5>
+            </div>
+          </div>
+          <div class="liked">
+            <i class="ri-play-large-fill play"></i>
+            <img src="./Images/matushka.webp" alt="" />
+            <div class="like-song">
+              <h4 style="display: inline">
+                MATUSHKA ULTRAFUNK (SUPER SLOWED + ULTRA SLOWED)
+              </h4>
+              <h5>EP • satirin</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="Player">
+      <div class="player-menu">
+        <div class="song-player">
+          <img src="./Images/matushka.webp" alt="" />
+          <div class="player-text">
+            <div style="width: 300px; overflow: hidden">
+              <marquee
+                style="font-size: small; cursor: pointer;"
+                width="100%"
+                behavior="scroll"
+                direction="left"
+                class="marquee"              >
+                MATUSHKA ULTRAFUNK (SUPER SLOWED + ULTRA SLOWED)
+              </marquee>
+              <h5>satirin</h5>
+            </div>
+            <i
+              class="ri-checkbox-circle-fill"
+              style="color: rgb(6, 193, 6)"
+            ></i>
+          </div>
+        </div>
+        <div class="player-setting">
+          <div class="player-icon">
+            <i class="ri-shuffle-line" style="color: rgb(176, 176, 176)"></i>
+            <i class="ri-skip-back-fill" style="color: rgb(176, 176, 176)"></i>
+            <i class="ri-play-circle-fill" style="font-size: 45px"></i>
+            <i
+              class="ri-skip-forward-fill"
+              style="color: rgb(176, 176, 176)"
+            ></i>
+            <i class="ri-repeat-2-fill" style="color: rgb(176, 176, 176)"></i>
+          </div>
+          <div class="length">
+            <h4>0:00</h4>
+            <div class="progress-bar"></div>
+            <h4>3:24</h4>
+          </div>
         </div>
 
-    </header>
-    <script src="./JS/nav.js"></script>
-</body>
+        <div class="player-more">
+          <div class="icon-pack">
+            <i class="ri-mic-fill"></i>
+            <i class="ri-play-list-fill"></i>
+            <i class="ri-speaker-fill"></i>
+          </div>
+          <div class="speaker">
+            <i class="ri-volume-down-line"></i>
+            <div class="speaker-progress"></div>
+            <i class="ri-fullscreen-exit-line"></i>
+            <i class="ri-fullscreen-fill"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

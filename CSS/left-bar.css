@@ -1,0 +1,218 @@
+.left-bar {
+  width: 32vw;
+  border: 2px solid black;
+  margin: 5px 5px;
+  margin-bottom: 0;
+  border-radius: 10px;
+  height: 75vh;
+  background-color: rgb(28, 28, 28);
+}
+
+.left-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 20px;
+  padding-bottom: 0;
+
+  & .your {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  & .collapse {
+    cursor: pointer;
+    font-size: x-large;
+    color: gray;
+    display: none;
+  }
+
+  & h4 {
+    font-size: large;
+    cursor: pointer;
+    color: white;
+  }
+
+  & .create {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    & .create-btn {
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: none;
+      background-color: #393939;
+      color: white;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    & .create-btn:hover {
+      background-color: #585858;
+      color: white;
+    }
+
+    & .expand {
+      padding: 10px 10px;
+      border-radius: 50px;
+      font-size: large;
+      color: rgb(151, 151, 151);
+      border: none;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    & .expand:hover {
+      background-color: #393939;
+      color: white;
+    }
+  }
+}
+
+.left-bar:hover .collapse {
+  display: flex;
+}
+
+.collapse:hover {
+  color: white;
+}
+
+.albums {
+  padding: 20px 22px;
+  padding-bottom: 0;
+}
+.albums-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & .albums-btn {
+    padding: 8px 10px;
+    width: fit-content;
+    background-color: #393939;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+
+  & .albums-btn:hover {
+    background-color: rgb(98, 98, 98);
+  }
+
+  & .recents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & .sirji {
+      padding: 5px 7px;
+      border-radius: 50px;
+      color: rgb(176, 176, 176);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    & .left-recents {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      font-size: 17px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      color: rgb(176, 176, 176);
+      transition: transform 0.3s ease;
+
+      & h4 {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.left-recents:hover {
+  transform: scale(1.05);
+  & h4 {
+    color: white;
+  }
+
+  & i {
+    color: white;
+  }
+}
+
+.sirji:hover {
+  background-color: #585858;
+  color: white;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+
+  & .liked {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 22px;
+    align-items: center;
+    gap: 15px;
+    /* border: 2px solid white; */
+    margin: 0 10px;
+    border-radius: 10px;
+
+
+    & .play{
+      position: absolute;
+      transform: translateX(15px);
+      display: none;
+      font-size: 25px;
+      color: white;
+    }
+
+    & img {
+      border-radius: 5px;
+      width: 50px;
+      z-index: 1;
+    }
+
+    & .like-song {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      & h4 {
+        font-size: large;
+        color: white;
+        font-weight: lighter;
+      }
+
+      & h5 {
+        font-size: medium;
+        color: rgb(176, 176, 176);
+        font-weight: lighter;
+      }
+    }
+  }
+}
+.liked:hover{
+  background-color: rgb(46, 46, 46);
+  & .play{
+    display: flex;
+    opacity: 1;
+    color: white;
+  }
+
+  & img{
+    opacity: 0.4;
+    z-index: 2;
+  }
+}
