@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./CSS/main.css" />
     <link rel="stylesheet" href="./CSS/left-bar.css" />
     <link rel="stylesheet" href="./CSS/player.css" />
+    <link rel="stylesheet" href="./CSS/right-bar.css" />
   </head>
   <body>
     <header class="nav">
@@ -47,67 +48,639 @@
       </div>
     </header>
 
-    <section class="left-bar">
-      <div class="library">
-        <div class="left-menu">
-          <div class="your">
-            <i class="ri-sidebar-fold-line collapse"></i>
-            <h4>Your Library</h4>
-          </div>
-          <div class="create">
-            <button class="create-btn">
-              <i class="ri-add-large-line"></i> &nbsp;Create
-            </button>
-            <i class="ri-expand-diagonal-line expand"></i>
-          </div>
-        </div>
-        <div class="albums">
-          <div class="albums-parent">
-            <div class="albums-btn">albums</div>
-            <div class="recents">
-              <i class="ri-search-line sirji"></i>
-              <button class="left-recents">
-                <h4>Recents</h4>
-                <i class="ri-list-unordered"></i>
+    <section class="divided">
+      <section class="left-bar">
+        <div class="library">
+          <div class="left-menu">
+            <div class="your">
+              <i class="ri-sidebar-fold-line collapse"></i>
+              <h4>Your Library</h4>
+            </div>
+            <div class="create">
+              <button class="create-btn">
+                <i class="ri-add-large-line"></i> &nbsp;Create
               </button>
+              <i class="ri-expand-diagonal-line expand"></i>
+            </div>
+          </div>
+          <div class="albums">
+            <div class="albums-parent">
+              <div class="albums-btn">albums</div>
+              <div class="recents">
+                <i class="ri-search-line sirji"></i>
+                <button class="left-recents">
+                  <h4>Recents</h4>
+                  <i class="ri-list-unordered"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="songs">
-        <div class="playlist">
-          <div class="liked">
-            <i class="ri-play-large-fill play"></i>
-            <img src="./Images/liked-songs.png" alt="" />
-            <div class="like-song">
-              <h4>Liked Songs</h4>
-              <h5>
-                <i class="ri-pushpin-fill" style="color: rgb(0, 182, 0)"></i>
-                Playlist • 2 songs
-              </h5>
+        <div class="songs">
+          <div class="playlist" style="cursor: pointer">
+            <div class="liked">
+              <i class="ri-play-large-fill play"></i>
+              <img src="./Images/liked-songs.png" alt="" />
+              <div class="like-song">
+                <h4>Liked Songs</h4>
+                <h5>
+                  <i class="ri-pushpin-fill" style="color: rgb(0, 182, 0)"></i>
+                  Playlist • 2 songs
+                </h5>
+              </div>
             </div>
-          </div>
-          <div class="liked">
-            <i class="ri-play-large-fill play"></i>
-            <img src="./Images/batidao.webp" alt="" />
-            <div class="like-song">
-              <h4>NO BATIDÃO</h4>
-              <h5>Single • ZXKAI</h5>
+            <div class="liked">
+              <i class="ri-play-large-fill play"></i>
+              <img src="./Images/batidao.webp" alt="" />
+              <div class="like-song">
+                <h4>NO BATIDÃO</h4>
+                <h5>Single • ZXKAI</h5>
+              </div>
             </div>
-          </div>
-          <div class="liked">
-            <i class="ri-play-large-fill play"></i>
-            <img src="./Images/matushka.webp" alt="" />
-            <div class="like-song">
-              <h4 style="display: inline">
-                MATUSHKA ULTRAFUNK (SUPER SLOWED + ULTRA SLOWED)
-              </h4>
-              <h5>EP • satirin</h5>
+            <div class="liked">
+              <i class="ri-play-large-fill play"></i>
+              <img src="./Images/matushka.webp" alt="" />
+              <div class="like-song">
+                <h4 style="color: rgb(0, 206, 0)">
+                  MATUSHKA ULTRAFUNK (SUPER SLOWED + ULTRA SLOWED)
+                </h4>
+                <h5>EP • satirin</h5>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="right-bar">
+        <div class="right-nav">
+          <div class="right-nav-two">
+            <button
+              class="right-menu"
+              style="color: black; background-color: #ffffff"
+            >
+              All
+            </button>
+            <button class="right-menu">Music</button>
+            <button class="right-menu">Podcasts</button>
+          </div>
+        </div>
+
+        <div class="popular">
+          <div class="popular-child">
+            <div class="popular-text">
+              <h3>Popular albums and singles</h3>
+              <h5>Show all</h5>
+            </div>
+            <div class="slider-btns">
+              <button onclick="slideLeft()">❮</button>
+              <button onclick="slideRight()">❯</button>
+            </div>
+            <div class="popular-song">
+              <div class="popular-songs" id="songs">
+                <div class="aashiqui">
+                  <img src="./Images/aashiqui.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>Aashiqui 2</h4>
+                    <h5>Mithoon, Ankit Tiwari, Jeet Gaanguli</h5>
+                  </div>
+                </div>
+                <div class="aashiqui">
+                  <img src="./Images/sanam.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>Sanam Teri Kasam (Original Motion..</h4>
+                    <h5>Himesh Reshammiya, Sameer Anjaan, Subrat..</h5>
+                  </div>
+                </div>
+                <div class="aashiqui">
+                  <img src="./Images/finding.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>Finding Her</h4>
+                    <h5>Kushagra, Bharath, Seaheal</h5>
+                  </div>
+                </div>
+                <div class="aashiqui">
+                  <img src="./Images/ranjhana.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>Raanjhan(From "Do Patti")</h4>
+                    <h5>Sachet-Parampara, Parampara Tandon,...</h5>
+                  </div>
+                </div>
+                <div class="aashiqui">
+                  <img src="./Images/arjit.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>Ultimate Love Songs - Arijit Singh</h4>
+                    <h5>Arjit Singh</h5>
+                  </div>
+                </div>
+                <div class="aashiqui">
+                  <img src="./Images/jawaani.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>Yeh Jawaani Hai Deewani</h4>
+                    <h5>Pritam</h5>
+                  </div>
+                </div>
+                <div class="aashiqui">
+                  <img src="./Images/raper.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>Making Memories</h4>
+                    <h5>Karan Aujla, IKKy</h5>
+                  </div>
+                </div>
+                <div class="aashiqui">
+                  <img src="./Images/goat.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>YOUNG G.O.A.T</h4>
+                    <h5>Cheema Y, Gur Sidhu</h5>
+                  </div>
+                </div>
+                <div class="aashiqui">
+                  <img src="./Images/punjabi.jpg" alt="" />
+                  <div class="aashiqui-text">
+                    <h4>Sicario</h4>
+                    <h5>Shubh</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-btn">
+              <button onclick="slideLefts()">❮</button>
+              <button onclick="slideRights()">❯</button>
+            </div>
+            <div class="charts">
+              <div class="charts-child">
+                <div class="popular-text" style="padding-bottom: 20px">
+                  <h3>Popular Radio</h3>
+                  <h5>Show all</h5>
+                </div>
+                <div class="popular-songs" id="song">
+                  <div class="aashiqui">
+                    <img src="./Images/combo-1.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Jeet Gaanguli, Pritam, Shaarib Toshi...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/diljit.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Karan Aujla, AP Dhillon, Sidhu Moos...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/ar.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Unnikrishna, Hariharan, Arirudh...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/kishore.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Mukesh Tabassum, Hemant...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/kk.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Pritam, Roop Kumar Rathod, Visha..</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/shreya.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Vishal-Shekhar, Atif Aslam, Rahat..</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/sidhu.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>By Spotify</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/sanu.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Anuradha Paudwal, Asha Bhsol...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/yo.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Badshah, Pritam, Guru Randhawa and..</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/alka.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>With Vinod Rathod, Kumar Sanu, Udit...</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-btnes">
+              <button onclick="slideLeftes()">❮</button>
+              <button onclick="slideRightes()">❯</button>
+            </div>
+            <div class="artists">
+              <div class="artists-child">
+                <div class="popular-text" style="padding-bottom: 20px">
+                  <h3>Popular Artists</h3>
+                  <h5>Show all</h5>
+                </div>
+                <div class="popular-artists" id="songes">
+                  <div class="artists-info">
+                    <img src="./Images/yoyo.jpg" alt="" />
+                    <div class="artists-text">
+                      <h3>Yo Yo Honey Singh</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img
+                      src="./Images/arjit2.jpg"
+                      alt=""
+                      style="width: 150px; height: 155px"
+                    />
+                    <div class="artists-text">
+                      <h3>Arijit Singh</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img src="./Images/udit1.jpg" alt="" />
+                    <div class="artists-text">
+                      <h3>Udit Narayan</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img src="./Images/atif2.jpg" alt="" />
+                    <div class="artists-text">
+                      <h3>Atif Aslam</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img src="./Images/ak2.jpg" alt="" />
+                    <div class="artists-text">
+                      <h3>A.R.Rahman</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img
+                      src="./Images/anirudh2.jpg"
+                      alt=""
+                      style="height: 155px"
+                    />
+                    <div class="artists-text">
+                      <h3>Anirudh Ravichander</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img src="./Images/vishal.jpg" alt="" />
+                    <div class="artists-text">
+                      <h3>Vishal-Shekhar</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img src="./Images/eshaar.jpg" alt="" />
+                    <div class="artists-text">
+                      <h3>Shankar-Ehsaan-Loy</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img src="./Images/pritam2.jpg" alt="" />
+                    <div class="artists-text">
+                      <h3>Pritam</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                  <div class="artists-info">
+                    <img src="./Images/sachin.jpg" alt="" />
+                    <div class="artists-text">
+                      <h3>Sachin-Jigar</h3>
+                      <h5>Artist</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-btnss">
+              <button onclick="slideLeftss()">❮</button>
+              <button onclick="slideRightss()">❯</button>
+            </div>
+            <div class="charts">
+              <div class="charts-child">
+                <div class="popular-text">
+                  <h3>Charts</h3>
+                  <h5>Show all</h5>
+                </div>
+                <div class="popular-songs" id="songss">
+                  <div class="aashiqui">
+                    <img src="./Images/ranveer.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Hottest Hindi music that India is listening...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/nakli.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Tune in to the Hottest Tracks of Tollywood!..</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/danger.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Tune into the Hottest tracks of Kollywood!...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/south.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>New Music from Kollywood. Cover:..</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/telugu.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>New Music from Telugu! Cover:Sing Geetham</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/scifi.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Catch the hottest Punjabi tracks.Cover:..</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/top-50.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Your daily update of the most played tracks...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/hits.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>The hottest tracks in India.Cover:Justin...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/friday.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>New music from Prem Dhillon, The PropheC,...</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-btnss">
+              <button onclick="slideLeftsss()">❮</button>
+              <button onclick="slideRightsss()">❯</button>
+            </div>
+            <div class="editor">
+              <div class="editor-child">
+                <div class="popular-text">
+                  <h3>Editor's Picks: No-Skip Playlists</h3>
+                  <h5>Show all</h5>
+                </div>
+                <div class="popular-songs" id="songsss" style="padding: 30px 0">
+                  <div class="aashiqui">
+                    <img src="./Images/amir.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Soothe your broken heart with these...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/salman.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>K..K..K..Kiran to T..T..T..Tuffy,the...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/chill.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Sit back, and chill with Bollywood's easygoin...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/nakli2.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Revive & celebrate the magic of Lagaan.</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/kat2.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Relieve the biggest tracks of the decade...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/dhurandhar.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>India's biggest dance anthems, filling every...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/sad.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Soulful tunes for the heart that has loved a...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/song5.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Your Favourite filmy tracks reimagined as...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/eqaul.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Listen to women at full volume. Cover-Sunid...</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-btnss">
+              <button onclick="slideLeftssss()">❮</button>
+              <button onclick="slideRightssss()">❯</button>
+            </div>
+            <div class="best">
+              <div class="editor-child">
+                <div class="popular-text">
+                  <h3>India's Best</h3>
+                  <h5>Show all</h5>
+                </div>
+                <div
+                  class="popular-songs"
+                  id="songssss"
+                  style="padding: 30px 0"
+                >
+                  <div class="aashiqui" >
+                    <img src="./Images/dhura.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Boolywood Central, jab baje toh seedha...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/radar.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Most exciting artists from the Indian Indie...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/punjabi2.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Hottest tracks from your favourite I-Pop...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/cream.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Finest collection of Tamil Music from the...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/india2.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Best of the Indian Indie Scene. Cover-...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/pearls.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>The finest set of telugu music from th...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/punjabi30.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Ultimate 101 Punjabi Hits with Navaan...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/harayanvi.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Biggest Harayani hits from the last 10 years.</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-btnss">
+              <button onclick="slideLeftsssss()">❮</button>
+              <button onclick="slideRightsssss()">❯</button>
+            </div>
+            <div class="best">
+              <div class="editor-child">
+                <div class="popular-text">
+                  <h3>India's Best</h3>
+                  <h5>Show all</h5>
+                </div>
+                <div
+                  class="popular-songs"
+                  id="songsssss"
+                  style="padding: 30px 0"
+                >
+                  <div class="aashiqui">
+                    <img src="./Images/radhika.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Boolywood Central, jab baje toh seedha...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/gupta.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Most exciting artists from the Indian Indie...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/podcast2.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Hottest tracks from your favourite I-Pop...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/mentor.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Finest collection of Tamil Music from the...</h5>
+                    </div>
+                  </div>
+                  <div class="aashiqui">
+                    <img src="./Images/dhar.jpg" alt="" />
+                    <div class="aashiqui-text">
+                      <h5>Best of the Indian Indie Scene. Cover-...</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="terms">
+          <div class="terms-child">
+            <div class="company">
+              <h3>Company</h3>
+              <h5>About</h5>
+              <h5>Jobs</h5>
+              <h5>For the Record</h5>
+            </div>
+            <div class="company">
+              <h3>Communities</h3>
+              <h5>For Artists</h5>
+              <h5>Developers</h5>
+              <h5>Advertising</h5>
+              <h5>Investors</h5>
+              <h5>Vendors</h5>
+            </div>
+            <div class="company">
+              <h3>Useful Links</h3>
+              <h5>Support</h5>
+              <h5>Free Mobile App</h5>
+              <h5>Popular by Company</h5>
+              <h5>Import your music</h5>
+            </div>
+            <div class="company">
+              <h3>Spotify Plans</h3>
+              <h5>Premium <br>Standard</h5>
+              <h5>Premium <br>Platinum</h5>
+              <h5>Premium <br>Student</h5>
+              <h5>Spotify Free</h5>
+            </div>
+          </div>
+          <div class="follow-icon">
+            <div class="follow-child">
+              <i class="ri-instagram-line"></i>
+              <i class="ri-twitter-fill"></i>
+              <i class="ri-facebook-circle-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="legal">
+          <div class="legal-child">
+            <h4>Legal</h4>
+            <h4>Safety&Privacy Center</h4>
+            <h4>Privacy Policy</h4>
+            <h4>Cookies</h4>
+            <h4>About Ads</h4>
+            <h4>Accessbility</h4>
+          </div>
+          <div class="copyright">
+            <h4>&copy; 2026 Spotify AB</h4>
+          </div>
+        </div>
+      </section>
+      <section class="hidden">
+        <div class="hidden-content">
+          <h2>❮</h2>
+        </div>
+      </section>
     </section>
 
     <footer class="Player">
@@ -117,11 +690,12 @@
           <div class="player-text">
             <div style="width: 300px; overflow: hidden">
               <marquee
-                style="font-size: small; cursor: pointer;"
+                style="font-size: small; cursor: pointer"
                 width="100%"
                 behavior="scroll"
                 direction="left"
-                class="marquee"              >
+                class="marquee"
+              >
                 MATUSHKA ULTRAFUNK (SUPER SLOWED + ULTRA SLOWED)
               </marquee>
               <h5>satirin</h5>
@@ -134,14 +708,14 @@
         </div>
         <div class="player-setting">
           <div class="player-icon">
-            <i class="ri-shuffle-line" style="color: rgb(176, 176, 176)"></i>
-            <i class="ri-skip-back-fill" style="color: rgb(176, 176, 176)"></i>
-            <i class="ri-play-circle-fill" style="font-size: 45px"></i>
+            <i class="ri-shuffle-line"></i>
+            <i class="ri-skip-back-fill"></i>
             <i
-              class="ri-skip-forward-fill"
-              style="color: rgb(176, 176, 176)"
+              class="ri-play-circle-fill"
+              style="font-size: 45px; color: white"
             ></i>
-            <i class="ri-repeat-2-fill" style="color: rgb(176, 176, 176)"></i>
+            <i class="ri-skip-forward-fill"></i>
+            <i class="ri-repeat-2-fill"></i>
           </div>
           <div class="length">
             <h4>0:00</h4>
@@ -165,5 +739,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./JS/app.js"></script>
   </body>
 </html>

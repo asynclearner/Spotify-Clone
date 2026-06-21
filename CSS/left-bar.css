@@ -1,10 +1,11 @@
 .left-bar {
-  width: 32vw;
-  border: 2px solid black;
-  margin: 5px 5px;
+  width: 30vw;
+  /* border: 2px solid black; */
+  margin: 0px 5px;
+  overflow: hidden;
   margin-bottom: 0;
   border-radius: 10px;
-  height: 75vh;
+  height: 78vh;
   background-color: rgb(28, 28, 28);
 }
 
@@ -31,7 +32,7 @@
   }
 
   & h4 {
-    font-size: large;
+    font-size: medium;
     cursor: pointer;
     color: white;
   }
@@ -49,7 +50,7 @@
       background-color: #393939;
       color: white;
       cursor: pointer;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
@@ -85,7 +86,7 @@
 }
 
 .albums {
-  padding: 20px 22px;
+  padding: 20px 15px;
   padding-bottom: 0;
 }
 .albums-parent {
@@ -117,7 +118,7 @@
       padding: 5px 7px;
       border-radius: 50px;
       color: rgb(176, 176, 176);
-      font-size: 20px;
+      font-size: 17px;
       cursor: pointer;
     }
 
@@ -125,7 +126,7 @@
       display: flex;
       flex-direction: row;
       gap: 5px;
-      font-size: 17px;
+      font-size: 15px;
       cursor: pointer;
       border: none;
       background-color: transparent;
@@ -162,9 +163,10 @@
   & .liked {
     display: flex;
     flex-direction: row;
-    padding: 10px 22px;
+    padding: 10px 10px;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+    overflow: hidden;
     /* border: 2px solid white; */
     margin: 0 10px;
     border-radius: 10px;
@@ -172,7 +174,7 @@
 
     & .play{
       position: absolute;
-      transform: translateX(15px);
+      transform: translateX(10px);
       display: none;
       font-size: 25px;
       color: white;
@@ -180,7 +182,7 @@
 
     & img {
       border-radius: 5px;
-      width: 50px;
+      width: 45px;
       z-index: 1;
     }
 
@@ -190,13 +192,16 @@
       gap: 2px;
 
       & h4 {
-        font-size: large;
+        display: inline;
+        inline-size: 500px;
+        /* border: 2px solid white; */
+        font-size: medium;
         color: white;
         font-weight: lighter;
       }
 
       & h5 {
-        font-size: medium;
+        font-size: small;
         color: rgb(176, 176, 176);
         font-weight: lighter;
       }

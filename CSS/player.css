@@ -1,7 +1,7 @@
 .player-menu {
   display: flex;
   flex-direction: row;
-  padding: 5px 0;
+  padding: 2px 0;
   padding-bottom: 0;
   /* border: 2px solid white; */
   color: white;
@@ -15,9 +15,10 @@
     flex-direction: row;
 
     & img {
-      width: 5vw;
+      width: 4vw;
+      cursor: pointer;
       border-radius: 5px;
-      height: 5vw;
+      height: 4vw;
     }
 
     & .player-text {
@@ -29,7 +30,7 @@
       /* border: 2px solid white; */
       overflow: hidden;
 
-      & .marquee:hover{
+      & .marquee:hover {
         text-decoration: underline;
       }
 
@@ -38,7 +39,7 @@
         cursor: pointer;
       }
 
-      & h5:hover{
+      & h5:hover {
         text-decoration: underline;
       }
     }
@@ -59,10 +60,17 @@
     align-items: center;
     font-size: 20px;
     gap: 20px;
+    
 
-    & i{
-    cursor: pointer;
+    & i {
+      cursor: pointer;
+      color: rgb(176, 176, 176)
     }
+  }
+
+  & i:hover {
+    transform: scale(1.1);
+    color: white;
   }
 
   & .length {
@@ -88,42 +96,52 @@
   }
 }
 
-.player-more{
+.player-more {
+  display: flex;
+  padding-left: 7vw;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+  & .icon-pack {
+    color: rgb(176, 176, 176);
     display: flex;
-    padding-left: 7vw;
+    gap: 20px;
+    font-size: 20px;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  & i:hover {
+    transform: scale(1.1);
+    color: white;
+  }
+
+  & .speaker {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
 
-    & .icon-pack{
-        color: rgb(176, 176, 176);
-        display: flex;
-        gap: 15px;
-        font-size: 20px;
-        flex-direction: row;
-        cursor: pointer;
-        align-items: center;
+    & i {
+      color: rgb(176, 176, 176);
+      cursor: pointer;
     }
 
-    & .speaker{
-        display: flex;
-        gap: 10px;
-        font-size: 20px;
-        flex-direction: row;
-        align-items: center;
-
-        & i{
-            color: rgb(176, 176, 176);
-            cursor: pointer;
-        }
-
-        & .speaker-progress{
-            height: 0.5vh;
-            cursor: pointer;
-            background-color: white;
-            width: 5vw;
-            outline: 1px solid white;
-            border-radius: 5px;
-        }
+    & i:hover {
+      transform: scale(1.1);
+      color: white;
     }
+
+    & .speaker-progress {
+      height: 0.5vh;
+      cursor: pointer;
+      background-color: white;
+      width: 5vw;
+      outline: 1px solid white;
+      border-radius: 5px;
+    }
+  }
 }
