@@ -7,7 +7,11 @@
 
 body{
     background-color: black;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
 }
+
 
 .divided{
     display: flex;
